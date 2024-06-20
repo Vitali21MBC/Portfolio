@@ -1,0 +1,74 @@
+footer {
+    height: 291px;
+    background-color: var(--darkBlueBG);
+    border-top: 4px solid var(--green);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px 100px 22px 100px;
+    font-family: 'Poppins';
+}
+
+.logoAndImpAndPP {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+
+    img {
+        height: 74px;
+        width: auto;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+
+        a {
+            color: white;
+            font-size: 16px;
+            line-height: 19px;
+            text-decoration: none;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.125s;
+
+            &:hover {
+                border-bottom: 2px solid var(--lightBlue);
+            }
+        }
+    }
+}
+
+span {
+    color: white;
+    font-size: 23px;
+    line-height: 28px;
+}
+
+.socialMediaLogos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 174px;
+    gap: 42px;
+
+    img {
+        height: 30px;
+        width: 30px;
+        transition: 0.1s;
+
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.33);
+            transition: 0.1s;
+
+        }
+    }
+}

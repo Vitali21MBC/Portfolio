@@ -1,0 +1,35 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--darkBlueBG);
+    padding: 22px 100px 22px 100px;
+    font-family: 'Poppins';
+
+    img {
+        height: 52px;
+        width: auto;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 29px;
+
+        a {
+            color: white;
+            font-size: 23px;
+            line-height: 28px;
+            text-decoration: none;
+
+            &:hover {
+                color: var(--green);
+            }
+        }
+    }
+}
