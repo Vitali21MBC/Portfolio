@@ -1,0 +1,67 @@
+.portfolioContainer {
+    display: flex;
+    align-items: flex-start;
+    height: 800px;
+    width: 100vw;
+}
+
+.portfolioHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.headLine {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    gap: 42px;
+    color: white;
+    margin-top: 40px;
+
+
+    // Den h1habe ich auch schon in der ATF Section. Eventuell auslagern auf höhere Ebene und wiederverwenden.
+    h1 {
+        font-size: 90px;
+        line-height: 108px;
+        font-weight: 700;
+        margin-block-start: 0.2em;
+        margin-block-end: 0.2em;
+    }
+}
+
+.leftSeperator,
+.rightSeperator {
+    height: 4px;
+    background-color: var(--purple);
+}
+
+
+.rightSeperator {
+    flex: 1;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    
+}
+
+.leftSeperatorContainer {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.leftSeperator {
+    height: 4px;
+    width: 109px;
+    border-radius: 12px;
+}
+
+.subHeadline {
+    p {
+        font-size: 16px;
+        color: white;
+    }
+}

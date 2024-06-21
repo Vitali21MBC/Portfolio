@@ -1,0 +1,123 @@
+.mySkillsContainer {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 800px;
+    padding-left: 100px;
+    gap: 42px;
+}
+
+.skillSetContainer {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 721px;
+    column-gap: 123px;
+    row-gap: 54px;
+    z-index: 10;
+}
+
+.skillSet {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 88px;
+    height: 100px;
+    gap: 10px;
+
+    &:hover {
+        img {
+            transform: translateY(-20px);
+        }
+    }
+
+    img {
+        height: 60px;
+        width: auto;
+        transition: 0.100s ease-in-out;
+    }
+
+    span {
+        color: white;
+    }
+}
+
+.descriptionWrapper {
+    display: flex;
+    align-items: center;
+    gap: 42px;
+}
+
+.skillsDescription {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    max-width: 471px;
+    text-align: right;
+    color: white;
+
+    // Den h1habe ich auch schon in der ATF Section. Eventuell auslagern auf höhere Ebene und wiederverwenden.
+    h1 {
+        font-size: 90px;
+        line-height: 108px;
+        font-weight: 700;
+        margin-block-start: 0em;
+        margin-block-end: 0.2em;
+    }
+
+    // Den p habe ich auch schon in der ATF Section. Eventuell auslagern auf höhere Ebene und wiederverwenden.
+    p {
+        font-size: 16px;
+        line-height: 19px;
+    }
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 120px;
+
+}
+
+// Den Button habe ich auch schon in der ATF Section. Eventuell auslagern auf höhere Ebene und wiederverwenden.
+.contactButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 30px 15px 30px;
+    background-color: var(--green);
+    border-radius: 10px;
+    font-size: 23px;
+    line-height: 28px;
+    margin-top: 40px;
+    transition: 0.100s ease-out;
+    margin-left: 100px;
+
+    &:hover {
+        cursor: pointer;
+        padding: 20px 40px 20px 40px;
+        background-color: var(--purple);
+        transform: scale(1.1);
+    }
+}
+
+// Den Seperator habe ich auch schon in der ATF Section. Eventuell auslagern auf höhere Ebene und wiederverwenden.
+.seperator {
+    height: 4px;
+    min-width: 58px;
+    background-color: var(--purple);
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+
+
+.shadow {
+    position: absolute;
+    bottom: -460px;
+    left: -580px;
+    transform: scaleY(-1);
+}
