@@ -63,8 +63,6 @@ p {
 
 }
 
-
-
 .contactBox {
     display: flex;
     justify-content: flex-end;
@@ -128,36 +126,26 @@ a {
     }
 }
 
-
-
-
 @import "bootstrap/scss/bootstrap";
 
-/* Deine benutzerdefinierten Stile */
 .form-control {
     border: 1px solid var(--purple);
-    /* Ändere die Rahmenfarbe */
     background-color: transparent;
-    /* Ändere die Hintergrundfarbe */
     border-radius: 10px;
-    /* Passe die Rundung der Ecken an */
     padding: 15px 25px 15px 25px;
-    /* Passe die Polsterung an */
     color: white;
 }
 
 .form-control:focus {
     border-color: var(--green);
     background-color: transparent;
-    /* Ändere die Rahmenfarbe beim Fokussieren */
     color: white;
     box-shadow: none;
 }
 
 .form-control:hover {
     border-color: var(--green);
-    cursor: pointer;
-    /* Ändere die Rahmenfarbe beim Fokussieren */
+    cursor: pointer
 }
 
 .form-control::placeholder {
@@ -171,9 +159,7 @@ a {
 
 .form-check-input {
     background-color: var(--darkBlueBG);
-    /* Ändere die Hintergrundfarbe des Kontrollkästchens, wenn es aktiviert ist */
     border-color: var(--green);
-    /* Ändere die Rahmenfarbe des Kontrollkästchens, wenn es aktiviert ist */
     border-radius: 0px !important;
     height: 18px;
     width: 18px;
@@ -186,9 +172,7 @@ a {
 
 .form-check-input:checked {
     background-color: var(--darkBlueBG);
-    /* Ändere die Hintergrundfarbe des Kontrollkästchens, wenn es aktiviert ist */
     border-color: var(--green);
-    /* Ändere die Rahmenfarbe des Kontrollkästchens, wenn es aktiviert ist */
     box-shadow: none;
 }
 
@@ -196,23 +180,8 @@ a {
     box-shadow: none;
 }
 
-
 .form-check-label {
     margin-left: 8px;
     font-size: 14px;
     line-height: 17px;
-}
-
-.btn-primary {
-    background-color: #007bff;
-    /* Ändere die Hintergrundfarbe des Buttons */
-    border-color: #007bff;
-    /* Ändere die Rahmenfarbe des Buttons */
-}
-
-.btn-primary:hover {
-    background-color: #0056b3;
-    /* Ändere die Hintergrundfarbe des Buttons beim Überfahren */
-    border-color: #0056b3;
-    /* Ändere die Rahmenfarbe des Buttons beim Überfahren */
 }

@@ -4,6 +4,7 @@
     flex-direction: column;
     align-items: flex-start;
     height: 100%;
+    scroll-padding-top: 240px;
 }
 
 .portfolioHeader {
@@ -45,7 +46,7 @@
     flex: 1;
     border-top-left-radius: 12px;
     border-bottom-left-radius: 12px;
-    
+
 }
 
 .leftSeperatorContainer {
@@ -67,11 +68,11 @@
     }
 }
 
-.portfolioProjects{
-    display:flex;
+.portfolioProjects {
+    display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction:column;
+    flex-direction: column;
     width: 100%;
     padding-top: 60px;
     padding-bottom: 160px;
@@ -84,7 +85,7 @@
     transform: rotate(90deg);
 }
 
-.projectsShadow{
+.projectsShadow {
     position: absolute;
     top: 50%;
     left: -80px;

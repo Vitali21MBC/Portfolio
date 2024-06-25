@@ -9,5 +9,6 @@ import { Component } from '@angular/core';
   styleUrl: './atf-section.component.scss'
 })
 export class AtfSectionComponent {
-
+  isTarget: string = '';
+  contact: string = 'contact';
 }

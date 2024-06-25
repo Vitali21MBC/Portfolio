@@ -21,7 +21,7 @@ export class ContactFormComponent {
     agree: false,
   }
 
-  mailTest = true;
+  mailTest = false;
 
   constructor() {
 

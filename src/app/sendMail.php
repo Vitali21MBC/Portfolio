@@ -19,15 +19,15 @@ switch ($_SERVER['REQUEST_METHOD']) {
             $message = $params->message;
     
             $recipient = 'info@vitali-rudi-dev.de';  
-            $subject = "Contact From <$email>";
-            $message = "From:" . $name . "<br>" . $message ;
+            $subject = "Message from Website";
+            $message = "<b>From:</b> " . $name . "<br><br>" . "<b>Email:</b> " . $email . "<br><br>" . $message;
     
             $headers   = array();
             $headers[] = 'MIME-Version: 1.0';
             $headers[] = 'Content-type: text/html; charset=utf-8';
 
             // Additional headers
-            $headers[] = "From: Website Contact Form";
+            $headers[] = "From: Website-Contact-Form";
 
             mail($recipient, $subject, $message, implode("\r\n", $headers));
             break;
