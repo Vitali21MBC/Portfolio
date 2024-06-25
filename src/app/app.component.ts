@@ -4,6 +4,7 @@ import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './shared/component/header/header.component';
 import { FooterComponent } from './shared/component/footer/footer.component';
 import * as aos from 'aos';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -12,11 +13,21 @@ import * as aos from 'aos';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
+
 export class AppComponent {
   title = 'portfolio';
   AOS = aos;
+  form: FormGroup;
 
-  constructor(){
+  constructor(private fb: FormBuilder) {
+
+    this.form = this.fb.group({
+      firstName: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      message: ['', Validators.required],
+      agree: [false, Validators.requiredTrue]
+    });
+
     this.AOS.init({
       // Global settings:
       disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
@@ -27,8 +38,8 @@ export class AppComponent {
       disableMutationObserver: false, // disables automatic mutations' detections (advanced)
       debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
       throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
-      
-    
+
+
       // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
       offset: 120, // offset (in px) from the original trigger point
       delay: 0, // values from 0 to 3000, with step 50ms
@@ -37,7 +48,29 @@ export class AppComponent {
       once: true, // whether animation should happen only once - while scrolling down
       mirror: true, // whether elements should animate out while scrolling past them
       anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
-    
+
+    });
+  }
+
+  onSubmit() {
+    if (this.form.valid) {
+      console.log('Form Submitted', this.form.value);
+    } else {
+      console.log('Form not valid');
+      this.validateAllFormFields(this.form);
+    }
+  }
+
+  validateAllFormFields(formGroup: FormGroup) {
+    Object.keys(formGroup.controls).forEach(field => {
+      const control = formGroup.get(field);
+      if (control) { // Nullprüfung hinzugefügt
+        if (control instanceof FormGroup) {
+          this.validateAllFormFields(control);
+        } else {
+          control.markAsTouched({ onlySelf: true });
+        }
+      }
     });
   }
 

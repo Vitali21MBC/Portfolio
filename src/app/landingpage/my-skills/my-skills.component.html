@@ -1,13 +1,13 @@
 <div class="mySkillsContainer">
 
-    <div class="skillSetContainer">
+    <div class="skillSetContainer" data-aos="fade-right">
         <div class="skillSet" *ngFor="let item of skills; index as i;">
             <img src={{item.url}} alt={{item.title}}>
             <span>{{item.title}}</span>
         </div>
     </div>
 
-    <div class="descriptionWrapper">
+    <div class="descriptionWrapper" data-aos="fade-left">
 
         <div class="skillsDescription">
             <h1>My skills</h1>
@@ -23,7 +23,7 @@
 
     </div>
 
-    <img class="shadow" src="./../../../assets/img/mySkillsShadow.png">
+    <img class="colorAccent" src="./../../../assets/img/mySkillsShadow.png">
 
 
 

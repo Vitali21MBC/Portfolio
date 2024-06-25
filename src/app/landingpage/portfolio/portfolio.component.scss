@@ -1,8 +1,9 @@
 .portfolioContainer {
+    position: relative;
     display: flex;
+    flex-direction: column;
     align-items: flex-start;
-    height: 800px;
-    width: 100vw;
+    height: 100%;
 }
 
 .portfolioHeader {
@@ -64,4 +65,28 @@
         font-size: 16px;
         color: white;
     }
+}
+
+.portfolioProjects{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction:column;
+    width: 100%;
+    padding-top: 60px;
+    padding-bottom: 160px;
+}
+
+.colorShadow {
+    position: absolute;
+    bottom: -200px;
+    right: -600px;
+    transform: rotate(90deg);
+}
+
+.projectsShadow{
+    position: absolute;
+    top: 50%;
+    left: -80px;
+    transform: translatey(-50%);
 }

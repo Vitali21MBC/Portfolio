@@ -1,0 +1,218 @@
+.contactContainer {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    color: white !important;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 50px;
+    padding-bottom: 160px;
+    height: 920px;
+    overflow-y: hidden;
+}
+
+.contactText {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+}
+
+.contactHeader {
+    display: flex;
+    align-items: center;
+    gap: 42px;
+    transform: translatex(-100px);
+}
+
+.invalid-feedback {
+    display: flex !important;
+}
+
+
+.seperator {
+    height: 4px;
+    min-width: 58px;
+    background-color: var(--purple);
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+
+}
+
+
+h1 {
+    font-size: 90px !important;
+    line-height: 108px !important;
+    font-weight: 700 !important;
+    margin-block-start: 0em !important;
+    margin-block-end: 0em !important;
+}
+
+h2 {
+    font-size: 32px !important;
+    line-height: 38px !important;
+    font-weight: 700 !important;
+    margin-block-start: 0.2em !important;
+    margin-block-end: 1.2em !important;
+    margin-top: 94px !important;
+}
+
+// Den p habe ich auch schon in der ATF Section. Eventuell auslagern auf höhere Ebene und wiederverwenden.
+p {
+    font-size: 16px !important;
+    line-height: 19px !important;
+
+}
+
+
+
+.contactBox {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.column {
+    flex-direction: column;
+    align-items: flex-end;
+    max-width: 617px;
+    gap: 10px;
+}
+
+a {
+    color: var(--purple) !important;
+    text-decoration: none !important;
+
+    &:hover {
+        cursor: pointer;
+        text-decoration: underline !important;
+    }
+
+}
+
+.colorAccent {
+    position: absolute;
+    bottom: -300px;
+    left: 0px;
+}
+
+.contactBtnContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contactButton {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 30px 15px 30px;
+    border-radius: 10px;
+    font-size: 23px;
+    line-height: 28px;
+    margin-top: 40px;
+    transition: 0.100s ease-out;
+    color: white;
+
+    &:disabled {
+        background-color: grey;
+    }
+
+    &:enabled {
+        background-color: var(--green);
+    }
+
+    &:enabled:hover {
+        cursor: pointer;
+        background-color: var(--purple);
+        transform: scale(1.1);
+    }
+}
+
+
+
+
+@import "bootstrap/scss/bootstrap";
+
+/* Deine benutzerdefinierten Stile */
+.form-control {
+    border: 1px solid var(--purple);
+    /* Ändere die Rahmenfarbe */
+    background-color: transparent;
+    /* Ändere die Hintergrundfarbe */
+    border-radius: 10px;
+    /* Passe die Rundung der Ecken an */
+    padding: 15px 25px 15px 25px;
+    /* Passe die Polsterung an */
+    color: white;
+}
+
+.form-control:focus {
+    border-color: var(--green);
+    background-color: transparent;
+    /* Ändere die Rahmenfarbe beim Fokussieren */
+    color: white;
+    box-shadow: none;
+}
+
+.form-control:hover {
+    border-color: var(--green);
+    cursor: pointer;
+    /* Ändere die Rahmenfarbe beim Fokussieren */
+}
+
+.form-control::placeholder {
+    color: white;
+}
+
+.form-control:focus::placeholder {
+    color: transparent;
+    outline: none;
+}
+
+.form-check-input {
+    background-color: var(--darkBlueBG);
+    /* Ändere die Hintergrundfarbe des Kontrollkästchens, wenn es aktiviert ist */
+    border-color: var(--green);
+    /* Ändere die Rahmenfarbe des Kontrollkästchens, wenn es aktiviert ist */
+    border-radius: 0px !important;
+    height: 18px;
+    width: 18px;
+    margin-right: 4px;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.form-check-input:checked {
+    background-color: var(--darkBlueBG);
+    /* Ändere die Hintergrundfarbe des Kontrollkästchens, wenn es aktiviert ist */
+    border-color: var(--green);
+    /* Ändere die Rahmenfarbe des Kontrollkästchens, wenn es aktiviert ist */
+    box-shadow: none;
+}
+
+.form-check-input:focus {
+    box-shadow: none;
+}
+
+
+.form-check-label {
+    margin-left: 8px;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    /* Ändere die Hintergrundfarbe des Buttons */
+    border-color: #007bff;
+    /* Ändere die Rahmenfarbe des Buttons */
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    /* Ändere die Hintergrundfarbe des Buttons beim Überfahren */
+    border-color: #0056b3;
+    /* Ändere die Rahmenfarbe des Buttons beim Überfahren */
+}

@@ -1,4 +1,4 @@
-.shadow {
+.colorAccent {
     position: absolute;
     top: -160px;
     right: -400px;
@@ -18,9 +18,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 471px;
+    width: 560px;
     z-index: 2;
     padding-left: 100px;
+    gap: 24px;
 
 
     h1 {
@@ -34,7 +35,14 @@
     p {
         font-size: 16px;
         line-height: 19px;
+        margin-bottom: 0rem;
     }
+}
+
+.moreAboutMe{
+    display: flex;
+    gap: 24px;
+    flex-direction: column; 
 }
 
 .moreAboutMeText {
@@ -51,6 +59,10 @@
         &:hover {
             transform: scale(1.2);
         }
+    }
+
+    p{
+        margin-bottom: 0rem;
     }
 }
 

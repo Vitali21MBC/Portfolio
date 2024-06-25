@@ -1,0 +1,59 @@
+<div class="contactContainer">
+  <div class="contactText" data-aos="fade-right">
+    <div class="contactHeader">
+      <div class="seperator"></div>
+      <h1>Contact</h1>
+    </div>
+    <h2>Got a problem to solve</h2>
+    <p>
+      Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your
+      projects with my work.
+      <br><br>
+      Need a Frontend developer? <b>Contact me!</b>
+    </p>
+  </div>
+
+  <div class="contactBox" data-aos="fade-up">
+    <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" class="row g-3 needs-validation column"
+      autocomplete="off" novalidate>
+      <div class="col-md-4">
+        <input #name="ngModel" [(ngModel)]="contactData.name" name="name" type="text" class="form-control" id="name"
+          placeholder="Your name" required>
+        <div *ngIf="!name.valid && name.touched" class="invalid-feedback">
+          Please provide your name.
+        </div>
+      </div>
+      <div class="col-md-4">
+        <input #email="ngModel" [(ngModel)]="contactData.email" name="email" type="email" class="form-control"
+          id="email" placeholder="Your email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+        <div *ngIf="!email.valid && email.touched" class="invalid-feedback">
+          Please provide a valid email address.
+        </div>
+      </div>
+      <div class="col-md-4">
+        <textarea #message="ngModel" [(ngModel)]="contactData.message" name="message" class="form-control" id="message"
+          placeholder="Your message" rows="8" required></textarea>
+        <div *ngIf="!message.valid && message.touched" class="invalid-feedback">
+          Please provide a message.
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="form-check">
+          <input #agree="ngModel" [(ngModel)]="contactData.agree" name="agree" class="form-check-input" type="checkbox"
+            id="invalidCheck" required (change)="agree.control.markAsTouched()">
+          <label class="form-check-label" for="invalidCheck">
+            I've read the <a href="#">privacy policy</a> and agree to the processing of my data as outlined.
+          </label>
+          <div *ngIf="!agree.valid && agree.touched" class="invalid-feedback">
+            You must agree before submitting.
+          </div>
+        </div>
+      </div>
+      <div class="contactBtnContainer">
+        <button class="contactButton" type="submit" [disabled]="!contactForm.form.valid">Send message :)</button>
+      </div>
+    </form>
+  </div>
+
+  <img class="colorAccent" src="./../../../assets/img/contactShadow.png">
+</div>
