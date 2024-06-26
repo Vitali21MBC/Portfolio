@@ -13,4 +13,8 @@ export class HeaderComponent {
   aboutMe: string = 'aboutMe';
   mySkills: string = 'mySkills';
   portfolio: string = 'portfolio';
+
+  navigateStart() {
+    window.location.href='#';
+  }
 }

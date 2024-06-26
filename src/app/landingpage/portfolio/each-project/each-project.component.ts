@@ -11,4 +11,8 @@ import { ProjectInfoService } from '../project-info.service';
 })
 export class EachProjectComponent {
   projectInfo!: ProjectInfoService;
+  navigateToUrl(url:string){
+    window.open(url, "_blank")?.focus();
+  }
 }
+

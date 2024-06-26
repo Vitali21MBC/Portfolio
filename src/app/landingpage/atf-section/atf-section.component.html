@@ -18,7 +18,7 @@
                 <span class="jobTitle">Frontend Developer</span>
             </div>
         </div>
-        <div class="contactButton">
+        <div class="contactButton" (click)="navigateToContact()">
             Let's Talk!
         </div>
     </div>
@@ -27,12 +27,12 @@
 
     <div class="contactInfo">
         <div class="seperator"></div>
-        <img src="./../../../../assets/img/icons/gitHub.svg" alt="">
-        <img src="./../../../../assets/img/icons/mail.svg" alt="">
-        <img src="./../../../../assets/img/icons/linkedIn.svg" alt="">
-        <a (click)="isTarget = contact" href="#contact">info&#64;vitali-rudi-dev.de</a>
+        <img src="./../../../../assets/img/icons/gitHub.svg" alt="" (click)="navigateToUrl('https://github.com/Vitali21MBC')">
+        <a href="mailto:info@vitali-rudi-dev.de"><img src="./../../../../assets/img/icons/mail.svg" alt=""></a>
+        <img src="./../../../../assets/img/icons/linkedIn.svg" alt="" (click)="navigateToUrl('https://www.linkedin.com/in/vitali-rudi-a6854a316/')">
+        <a (click)="navigateToContact()">info&#64;vitali-rudi-dev.de</a>
     </div>
 
-    <img class="scrolldown" src="./../../../assets/img/icons/scrollDown.png" alt="scrolldown">
+    <img class="scrolldown" src="./../../../assets/img/icons/scrollDown.png" alt="scrolldown" (click)="navigateToAboutMe()">
 
 </div>

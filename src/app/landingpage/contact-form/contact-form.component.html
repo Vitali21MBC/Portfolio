@@ -52,8 +52,9 @@
       <div class="contactBtnContainer">
         <button class="contactButton" type="submit" [disabled]="!contactForm.form.valid">Send message :)</button>
       </div>
+
     </form>
   </div>
-
+  <div (click)="navigateStart()" class="goUpButton" ></div>
   <img class="colorAccent" src="./../../../assets/img/contactShadow.png">
 </div>

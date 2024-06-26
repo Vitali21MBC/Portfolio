@@ -10,6 +10,11 @@ import { Component } from '@angular/core';
 })
 export class MySkillsComponent {
 
+  navigateToContact(){
+    window.location.href="#contact"
+  }
+
+
     skills = [
     {
       url: '/assets/img/icons/angular.svg',

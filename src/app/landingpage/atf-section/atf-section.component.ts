@@ -11,4 +11,16 @@ import { Component } from '@angular/core';
 export class AtfSectionComponent {
   isTarget: string = '';
   contact: string = 'contact';
+
+  navigateToContact(){
+    window.location.href="#contact"
+  }
+
+  navigateToAboutMe(){
+    window.location.href="#aboutMe"
+  }
+
+  navigateToUrl(url:string){
+    window.open(url, "_blank")?.focus();
+  }
 }

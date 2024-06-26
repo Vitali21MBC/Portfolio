@@ -7,7 +7,7 @@
     padding-right: 100px;
     padding-bottom: 50px;
     padding-bottom: 160px;
-    height: 920px;
+    height: 880px;
     overflow-y: hidden;
 }
 
@@ -53,7 +53,7 @@ h2 {
     font-weight: 700 !important;
     margin-block-start: 0.2em !important;
     margin-block-end: 1.2em !important;
-    margin-top: 94px !important;
+    margin-top: 60px !important;
 }
 
 // Den p habe ich auch schon in der ATF Section. Eventuell auslagern auf höhere Ebene und wiederverwenden.
@@ -107,7 +107,7 @@ a {
     border-radius: 10px;
     font-size: 23px;
     line-height: 28px;
-    margin-top: 40px;
+    margin-top: 20px;
     transition: 0.100s ease-out;
     color: white;
 
@@ -122,6 +122,22 @@ a {
     &:enabled:hover {
         cursor: pointer;
         background-color: var(--purple);
+        transform: scale(1.1);
+    }
+}
+
+.goUpButton {
+    height: 39px;
+    width: 39px;
+    position: absolute;
+    right: 100px;
+    bottom: 60px;
+    background: url(./../../../assets/img/icons/goUpButton.svg);
+    transition: 0.100s ease-out;
+
+    &:hover{
+        background: url(./../../../assets/img/icons/goUpButtonHover.svg);
+        cursor: pointer;
         transform: scale(1.1);
     }
 }

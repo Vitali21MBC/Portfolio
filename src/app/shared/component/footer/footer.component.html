@@ -1,10 +1,10 @@
 <footer>
 
     <div class="logoAndImpAndPP">
-        <img src="./../../../../assets/img/logo.png">
+        <img (click)="navigateStart()" src="./../../../../assets/img/logo.png">
         <div>
-            <a href="#">Imprint</a>
-            <a href="#">Privacy Policy</a>
+            <a routerLink="imprint">Imprint</a>
+            <a routerLink="privacy-policy">Privacy Policy</a>
         </div>
     </div>
 
@@ -13,9 +13,11 @@
     </span>
 
     <div class="socialMediaLogos">
-        <img src="./../../../../assets/img/icons/gitHub.svg" alt="">
-        <img src="./../../../../assets/img/icons/mail.svg" alt="">
-        <img src="./../../../../assets/img/icons/linkedIn.svg" alt="">
+        <img src="./../../../../assets/img/icons/gitHub.svg" alt=""
+            (click)="navigateToUrl('https://github.com/Vitali21MBC')">
+        <a href="mailto:info@vitali-rudi-dev.de"><img src="./../../../../assets/img/icons/mail.svg" alt=""></a>
+        <img src="./../../../../assets/img/icons/linkedIn.svg" alt=""
+            (click)="navigateToUrl('https://www.linkedin.com/in/vitali-rudi-a6854a316/')">
     </div>
 
 </footer>

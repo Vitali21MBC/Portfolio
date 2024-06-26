@@ -9,5 +9,7 @@ import { Component } from '@angular/core';
   styleUrl: './each-project-mirrored.component.scss'
 })
 export class EachProjectMirroredComponent {
-
+  navigateToUrl(url:string){
+    window.open(url, "_blank")?.focus();
+  }
 }

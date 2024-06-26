@@ -12,6 +12,7 @@ header {
     img {
         height: 52px;
         width: auto;
+        transform: translatex(-10px);
 
         &:hover {
             cursor: pointer;

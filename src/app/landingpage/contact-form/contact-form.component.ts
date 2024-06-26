@@ -12,6 +12,10 @@ import { FormBuilder, FormsModule, NgForm, ReactiveFormsModule, Validators } fro
 })
 export class ContactFormComponent {
 
+  navigateStart() {
+    window.location.href='#';
+  }
+
   http = inject(HttpClient)
 
   contactData = {
