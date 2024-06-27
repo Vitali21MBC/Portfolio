@@ -2,18 +2,19 @@ import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormBuilder, FormsModule, NgForm, ReactiveFormsModule, Validators } from '@angular/forms';
+import { RouterModule, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-contact-form',
   standalone: true,
-  imports: [CommonModule, FormsModule, ReactiveFormsModule],
+  imports: [CommonModule, FormsModule, ReactiveFormsModule, RouterModule, RouterOutlet],
   templateUrl: './contact-form.component.html',
   styleUrl: './contact-form.component.scss'
 })
 export class ContactFormComponent {
 
   navigateStart() {
-    window.location.href='#';
+    window.location.href = '#';
   }
 
   http = inject(HttpClient)
@@ -26,6 +27,7 @@ export class ContactFormComponent {
   }
 
   mailTest = false;
+  showPopup: boolean = false;
 
   constructor() {
 
@@ -47,7 +49,7 @@ export class ContactFormComponent {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
-
+            this.displayPopup();
             ngForm.resetForm();
           },
           error: (error) => {
@@ -57,8 +59,27 @@ export class ContactFormComponent {
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
       console.log('Message sent!');
+      this.displayPopup();
       ngForm.resetForm();
+    } else {
+      // Markiere alle Felder als 'touched', um die Validierungsnachrichten anzuzeigen
+      Object.keys(ngForm.controls).forEach(field => {
+        const control = ngForm.controls[field];
+        control.markAsTouched({ onlySelf: true });
+      });
     }
+  }
+
+
+  displayPopup() {
+    this.showPopup = true;
+    setTimeout(() => {
+      this.hidePopup();
+    }, 2000);
+  }
+
+  hidePopup() {
+    this.showPopup = false;
   }
 
 }

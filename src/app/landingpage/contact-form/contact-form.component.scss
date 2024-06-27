@@ -9,6 +9,8 @@
     padding-bottom: 160px;
     height: 880px;
     overflow-y: hidden;
+    width: 100%;
+    max-width: 1920px;
 }
 
 .contactText {
@@ -24,9 +26,21 @@
     transform: translatex(-100px);
 }
 
-.invalid-feedback {
-    display: flex !important;
-}
+.form-group {
+    position: relative;
+  }
+  
+  .invalid-feedback {
+    position: absolute;
+    top: 98%;
+    left: 10px;
+    font-size: 14px;
+    display: none;
+  }
+  
+  .invalid-feedback.show {
+    display: block;
+  }
 
 
 .seperator {
@@ -126,6 +140,16 @@ a {
     }
 }
 
+.contactButton.disabled-look {
+    background-color: grey;
+}
+
+.contactButton.disabled-look:hover {
+    background-color: grey;
+    transform: scale(1);
+    cursor: default;
+}
+
 .goUpButton {
     height: 39px;
     width: 39px;
@@ -135,11 +159,46 @@ a {
     background: url(./../../../assets/img/icons/goUpButton.svg);
     transition: 0.100s ease-out;
 
-    &:hover{
+    &:hover {
         background: url(./../../../assets/img/icons/goUpButtonHover.svg);
         cursor: pointer;
         transform: scale(1.1);
     }
+}
+
+.popup {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--purple);
+    color: white;
+    padding: 15px 30px 15px 30px;
+    border: 2px solid var(--green);
+    border-radius: 10px;
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.1);
+    opacity: 0;
+    transition: opacity 0.5s, bottom 0.5s;
+    font-size: 32px;
+    font-weight: 700;
+    gap: 16px;
+
+    span {
+        transform: translatey(-6px);
+    }
+}
+
+.popup.show {
+    bottom: calc(100vh - 50%);
+    opacity: 1;
+}
+
+.popup.hide {
+    bottom: -50px;
+    opacity: 0;
 }
 
 @import "bootstrap/scss/bootstrap";

@@ -1,3 +1,13 @@
-body {
-    width: 100%;
+div{
+    background-color: var(--darkBlueBG);
+}
+
+app-header{
+    display: flex;
+    justify-content: center;
+}
+
+app-footer{
+    display: flex;
+    justify-content: center;
 }

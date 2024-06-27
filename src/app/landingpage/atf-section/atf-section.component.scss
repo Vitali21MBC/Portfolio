@@ -2,11 +2,13 @@
     position: relative;
     height: calc(100vh - 96px);
     font-family: 'Poppins';
+    width: 100%;
+    max-width: 1920px;
 }
 
 .shape {
     position: absolute;
-    top: calc(377.6px - 96px);
+    bottom: -550px;
     left: -5px;
     width: 100%;
     height: 1080px;
@@ -32,8 +34,8 @@
 
 .profileInfoContainer {
     position: absolute;
-    top: 200px;
-    right: 200px;
+    top: calc(100vh - 720px);
+    right: 100px;
     z-index: 3;
     color: white;
     display: inline-flex;
@@ -98,7 +100,7 @@
 
 .contactInfo {
     position: absolute;
-    top: 760px;
+    top: calc(100vh - 160px);
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -140,7 +142,7 @@
 
 .scrolldown {
     position: absolute;
-    top: 624px;
+    top: calc(100vh - 280px);
     right: 100px;
     animation: bounce 2.5s ease-in-out infinite;
     z-index: 10;

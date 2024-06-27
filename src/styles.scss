@@ -21,7 +21,8 @@
 }
 
 html {
-    scroll-padding-top: 96px; /* Höhe des Headers */
+    scroll-padding-top: 96px;
+    /* Höhe des Headers */
 }
 
 body {
@@ -35,3 +36,31 @@ body {
     --darkBlueBG: #141D2F;
     --darkBlueTrans: #141D2F;
 }
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--darkBlueBG);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--green);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--purple);
+    cursor:pointer;
+}
+
+// * {
+//     scrollbar-width: thin;
+//     scrollbar-color: var(--green) var(--darkBlueBG);
+// }
+
+// html {
+//     scrollbar-face-color: var(--green);
+//     scrollbar-track-color: var(--darkBlueBG);
+// }

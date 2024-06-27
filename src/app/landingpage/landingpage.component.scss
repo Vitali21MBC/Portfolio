@@ -2,6 +2,31 @@ div {
     background-color: var(--darkBlueBG);
     font-family: 'Poppins';
     overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
 
+    app-atf-section {
+        display: flex;
+        justify-content: center;
+    }
 
+    app-about-me-section {
+        display: flex;
+        justify-content: center;
+    }
+
+    app-my-skills {
+        display: flex;
+        justify-content: center;
+    }
+
+    app-portfolio {
+        display: flex;
+        justify-content: center;
+    }
+
+    app-contact-form {
+        display: flex;
+        justify-content: center;
+    }
 }
