@@ -5,7 +5,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 22px 100px 22px 100px;
+    padding: 25px 100px 25px 100px;
     font-family: 'Poppins';
     width: 100%;
     max-width: 1920px;
@@ -48,6 +48,27 @@ footer {
     }
 }
 
+.imprintMobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    display: none;
+
+    a {
+        color: white;
+        font-size: 16px;
+        line-height: 19px;
+        text-decoration: none;
+        border-bottom: 2px solid transparent;
+        transition: border-color 0.100s ease-out;
+
+        &:hover {
+            border-bottom: 2px solid var(--lightBlue);
+        }
+    }
+}
+
 span {
     color: white;
     font-size: 23px;
@@ -73,5 +94,41 @@ span {
             transition: 0.1s;
 
         }
+    }
+}
+
+@media screen and (max-width: 940px) {
+    footer {
+        padding: 25px 22px 25px 22px;
+
+    }
+}
+
+@media screen and (max-width: 840px) {
+    footer {
+        flex-direction: column;
+        height: 320px;
+        justify-content: center;
+    }
+
+    .logoAndImpAndPP {
+        margin-bottom: 48px;
+
+        img {
+            transform: translatex(0px);
+        }
+
+        div {
+            display: none;
+        }
+    }
+
+    span {
+        margin-bottom: 24px;
+    }
+
+    .imprintMobile {
+        display: flex;
+        margin-top: 24px;
     }
 }

@@ -5,4 +5,13 @@
         <a (click)="isTarget = mySkills" href="#mySkills">Skills</a>
         <a (click)="isTarget = portfolio" href="#portfolio">Portfolio</a>
     </nav>
+    <div class="burgerMenuIcon" (click)="toggleMenu()">
+        <div [ngClass]="{'open': menuOpen, 'close': !menuOpen}"></div>
+    </div>
 </header>
+<div class="burgerMenu" [class.active]="menuOpen">
+    <a (click)="isTarget = aboutMe; toggleMenu()" href="#aboutMe">About me</a>
+    <a (click)="isTarget = mySkills; toggleMenu()" href="#mySkills">Skills</a>
+    <a (click)="isTarget = portfolio; toggleMenu()" href="#portfolio">Portfolio</a>
+    <a (click)="isTarget = contact; toggleMenu()" href="#contact">Contact</a>
+</div>

@@ -7,7 +7,7 @@
     padding-right: 100px;
     padding-bottom: 50px;
     padding-bottom: 160px;
-    height: 880px;
+    min-height: 880px;
     overflow-y: hidden;
     width: 100%;
     max-width: 1920px;
@@ -16,7 +16,7 @@
 .contactText {
     display: flex;
     flex-direction: column;
-    width: 500px;
+    max-width: 500px;
 }
 
 .contactHeader {
@@ -28,19 +28,19 @@
 
 .form-group {
     position: relative;
-  }
-  
-  .invalid-feedback {
+}
+
+.invalid-feedback {
     position: absolute;
     top: 98%;
     left: 10px;
     font-size: 14px;
     display: none;
-  }
-  
-  .invalid-feedback.show {
+}
+
+.invalid-feedback.show {
     display: block;
-  }
+}
 
 
 .seperator {
@@ -51,6 +51,7 @@
     border-bottom-right-radius: 12px;
 
 }
+
 
 
 h1 {
@@ -74,7 +75,6 @@ h2 {
 p {
     font-size: 16px !important;
     line-height: 19px !important;
-
 }
 
 .contactBox {
@@ -259,4 +259,93 @@ a {
     margin-left: 8px;
     font-size: 14px;
     line-height: 17px;
+}
+
+@media screen and (max-width: 1330px) {
+    .contactContainer {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        overflow-x: hidden;
+        min-height: 940px;
+    }
+
+    .contactText {
+        align-items: center;
+        text-align: center;
+        max-width: 588px;
+    }
+
+    p {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .seperator {
+        flex: 1;
+    }
+
+    .seperatorPlaceholder {
+        flex: 1;
+    }
+
+    .contactHeader {
+        transform: translatex(0px);
+        width: 100vw;
+    }
+
+    h2 {
+        margin-top: 20px !important;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .colorAccent {
+        left: -220px;
+    }
+
+    .contactBox {
+        z-index: 2;
+    }
+}
+
+@media screen and (max-width: 940px) {
+    .goUpButton {
+
+        right: 25px;
+        z-index: 3;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .contactContainer {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    h1 {
+        font-size: 45px !important;
+        line-height: 54px !important;
+    }
+
+    .contactHeader {
+        gap: 5px;
+    }
+
+    .contactText[_ngcontent-ng-c1811330297] {
+        align-items: left;
+        text-align: left;
+    }
+
+    .seperator {
+        flex: none;
+        min-width: 20px;
+    }
+
+    h2 {
+        width: 100%;
+        margin-block-end: 0.8em !important;
+    }
 }

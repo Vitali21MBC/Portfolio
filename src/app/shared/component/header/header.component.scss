@@ -1,15 +1,73 @@
+@keyframes burgerToX {
+    0% {
+        background-image: url('./../../../../assets/img/icons/burgerMenu.svg');
+    }
+
+    25% {
+        background-image: url('./../../../../assets/img/icons/mobileMenuBurgerTransition.svg');
+    }
+
+    50% {
+        background-image: url('./../../../../assets/img/icons/mobileMenuCloseTransition.svg');
+    }
+
+    100% {
+        background-image: url('./../../../../assets/img/icons/mobileMenuCloseFinal.svg');
+    }
+}
+
+@keyframes xToBurger {
+    0% {
+        background-image: url('./../../../../assets/img/icons/mobileMenuCloseFinal.svg');
+    }
+
+    25% {
+        background-image: url('./../../../../assets/img/icons/mobileMenuCloseTransition.svg');
+    }
+
+    50% {
+        background-image: url('./../../../../assets/img/icons/mobileMenuBurgerTransition.svg');
+    }
+
+    100% {
+        background-image: url('./../../../../assets/img/icons/burgerMenu.svg');
+    }
+}
+
+.burgerMenuIcon div {
+    width: 30px;
+    height: 28px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation-duration: 0.2s;
+    animation-fill-mode:forwards;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.burgerMenuIcon .open {
+    animation-name: burgerToX;
+}
+
+.burgerMenuIcon .close {
+    animation-name: xToBurger;
+}
+
 header {
-    position: sticky;
+    position: fixed;
     top: 0;
     z-index: 99;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: space-between;
     background-color: var(--darkBlueBG);
-    padding: 22px 100px 22px 100px;
+    padding: 25px 100px 25px 100px;
     font-family: 'Poppins';
     width: 100%;
     max-width: 1920px;
+    transition: 0.125s ease-out;
 
     img {
         height: 52px;
@@ -18,6 +76,15 @@ header {
 
         &:hover {
             cursor: pointer;
+        }
+    }
+
+    .burgerMenuIcon {
+
+        img {
+            height: 28px;
+            width: 30px;
+            display: none;
         }
     }
 
@@ -37,5 +104,61 @@ header {
                 color: var(--green);
             }
         }
+    }
+}
+
+.burgerMenu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--darkBlueBG);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: right 0.3s ease;
+    z-index: 11;
+    opacity: 0.9;
+
+    a {
+        color: white;
+        font-size: 23px;
+        line-height: 28px;
+        text-decoration: none;
+        margin: 20px 0;
+
+        &:hover {
+            color: var(--green);
+        }
+    }
+
+    &.active {
+        right: 0;
+    }
+}
+
+@media screen and (max-width: 940px) {
+    header {
+        padding: 25px 22px 25px 22px;
+
+    }
+}
+
+@media (max-width: 660px) {
+    .burgerMenuIcon {
+        img {
+            display: flex !important;
+        }
+    }
+
+    nav {
+        display: none !important;
+    }
+
+    header {
+
+        align-items: center;
     }
 }

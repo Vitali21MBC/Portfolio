@@ -10,6 +10,12 @@
     max-width: 1920px;
 }
 
+.mySkillsHeader {
+    display: flex;
+    align-items: center;
+    gap: 42px;
+}
+
 .skillSetContainer {
     display: flex;
     flex-wrap: wrap;
@@ -17,6 +23,7 @@
     column-gap: 123px;
     row-gap: 54px;
     z-index: 10;
+    transition: 0.100s ease-out;
 }
 
 .skillSet {
@@ -56,7 +63,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    max-width: 471px;
+    max-width: 571px;
     text-align: right;
     color: white;
 
@@ -73,6 +80,7 @@
     p {
         font-size: 16px;
         line-height: 19px;
+        padding-right: 100px;
     }
 }
 
@@ -116,10 +124,201 @@
     border-bottom-left-radius: 12px;
 }
 
-
 .colorAccent {
     position: absolute;
     bottom: -460px;
     left: -580px;
     transform: scaleY(-1);
+}
+
+
+@media (max-width: 1420px) {
+    .skillSetContainer {
+        column-gap: 80px;
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 1290px) {
+    .skillSetContainer {
+        column-gap: 60px;
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 1130px) {
+    .mySkillsContainer {
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+        gap: 100px;
+        padding-left: 0;
+        padding-top: 80px;
+        height: 880px;
+    }
+
+    .skillsDescription {
+        p {
+            padding-right: 0;
+        }
+    }
+
+    .descriptionWrapper {
+        width: 100%;
+    }
+
+    .skillSetContainer {
+        max-width: 680px;
+        justify-content: center;
+    }
+
+    .skillsDescription {
+        width: 100%;
+        max-width: none;
+        align-items: center;
+    }
+
+    .mySkillsHeader {
+        width: 100%
+    }
+
+    .buttonContainer {
+        position: absolute;
+        bottom: -530px;
+        left: 100px;
+        right: 100px;
+        width: auto;
+    }
+
+    .contactButton {
+        margin-top: 20px;
+        margin-left: 0px;
+    }
+
+    .seperator {
+        flex: 1;
+    }
+
+    .seperatorPlaceholder {
+        flex: 1;
+    }
+
+}
+
+@media (max-width: 830px) {
+    .skillsDescription {
+        p {
+            padding-left: 25px;
+            padding-right: 25px;
+            text-align: left;
+        }
+    }
+
+    .colorAccent {
+        left: -640px;
+    }
+}
+
+@media (max-width: 740px) {
+    .skillSetContainer {
+        max-width: 540px;
+    }
+
+    .mySkillsContainer {
+        height: 980px;
+    }
+
+    .buttonContainer {
+        bottom: -680px;
+    }
+
+    .colorAccent {
+        left: -700px;
+    }
+}
+
+@media (max-width: 660px) {
+    .buttonContainer {
+
+        left: 25px;
+        right: 25px;
+    }
+}
+
+@media (max-width: 560px) {
+    .skillsDescription {
+        gap: 16px;
+
+        p {
+            text-align: right;
+        }
+
+        h1 {
+            font-size: 45px;
+            line-height: 54px;
+        }
+    }
+
+    .mySkillsContainer {
+        height: 820px;
+        gap: 24px;
+    }
+
+    .mySkillsHeader {
+        gap: 5px;
+    }
+
+    .seperator {
+        flex: none;
+        min-width: 20px;
+    }
+
+    .skillSetContainer {
+        row-gap: 32px;
+        column-gap: 40px;
+    }
+
+    .skillSet {
+        gap: 6px;
+
+        img {
+            height: 45px;
+        }
+    }
+
+    .buttonContainer {
+        bottom: -540px;
+    }
+}
+
+@media (max-width: 510px) {
+
+    .skillSetContainer {
+        row-gap: 22px;
+        column-gap: 28px;
+    }
+}
+
+@media (max-width: 445px) {
+
+    .skillSetContainer {
+        row-gap: 22px;
+        column-gap: 28px;
+    }
+
+    .buttonContainer {
+        bottom: -610px;
+
+    }
+
+    .mySkillsContainer {
+        height: 900px;
+    }
+}
+
+@media (max-width: 330px) {
+
+    .skillSetContainer {
+        row-gap: 20px;
+        column-gap: 20px;
+    }
 }
