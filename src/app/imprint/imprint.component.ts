@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, ElementRef, OnInit, Renderer2 } from '@angular/core';
 import { RouterModule, RouterOutlet } from '@angular/router';
 
 @Component({
@@ -9,10 +9,15 @@ import { RouterModule, RouterOutlet } from '@angular/router';
   templateUrl: './imprint.component.html',
   styleUrl: './imprint.component.scss'
 })
-export class ImprintComponent {
+export class ImprintComponent implements OnInit {
+
+  constructor(private renderer: Renderer2, private el: ElementRef) { }
+
   ngOnInit(): void {
-    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
-    //Add 'implements OnInit' to the class.
-    window.scrollTo({top:0});
+    window.scrollTo({ top: 0 });
+
+    const imprintElement = this.el.nativeElement;
+    this.renderer.setStyle(imprintElement, 'display', 'flex');
+    this.renderer.setStyle(imprintElement, 'justify-content', 'center');
   }
 }

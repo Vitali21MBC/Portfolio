@@ -26,8 +26,6 @@
     color: white;
     margin-top: 40px;
 
-
-    // Den h1habe ich auch schon in der ATF Section. Eventuell auslagern auf höhere Ebene und wiederverwenden.
     h1 {
         font-size: 90px;
         line-height: 108px;
@@ -42,7 +40,6 @@
     height: 4px;
     background-color: var(--purple);
 }
-
 
 .rightSeperator {
     flex: 1;
@@ -97,14 +94,12 @@
 }
 
 @media screen and (max-width: 1500px) {
-
     .projectsShadow {
         left: -260px;
     }
 }
 
 @media screen and (max-width:1350px) {
-
     .projectsShadow {
         left: -460px;
     }
@@ -112,14 +107,12 @@
 
 
 @media screen and (max-width: 1200px) {
-
     .projectsShadow {
         left: -660px;
     }
 }
 
 @media screen and (max-width: 920px) {
-
     .subHeadline {
         padding-left: 25px;
         padding-right: 25px;
@@ -135,13 +128,11 @@
 }
 
 @media screen and (max-width: 560px) {
-
     .portfolioHeader {
         gap: 16px;
     }
 
     .portfolioProjects {
-
         padding-top: 24px;
     }
 

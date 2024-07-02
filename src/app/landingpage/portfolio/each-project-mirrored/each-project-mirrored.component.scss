@@ -98,7 +98,6 @@
 }
 
 @media screen and (max-width: 1200px) {
-
     .projectDescription {
         width: 400px;
     }
@@ -107,7 +106,6 @@
 
 
 @media screen and (max-width: 1090px) {
-
     .projectImg {
         width: auto;
     }
@@ -116,12 +114,9 @@
         margin-right: 20px;
         padding-top: 0px;
     }
-
-
 }
 
 @media screen and (max-width: 920px) {
-
     .projectWrapper {
         flex-direction: column;
     }
@@ -145,7 +140,6 @@
 }
 
 @media screen and (max-width: 560px) {
-
     .projectImg {
         img {
             height: 240px;
@@ -173,13 +167,10 @@
         justify-content: space-around;
         gap: 0;
     }
-
 }
 
 @media screen and (max-width: 390px) {
-
     .githubButton, .liveTestButton{
         padding: 15px 20px 15px 20px;
     }
-
 }

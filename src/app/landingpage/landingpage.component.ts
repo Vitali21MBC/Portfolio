@@ -14,5 +14,4 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
   styleUrl: './landingpage.component.scss'
 })
 export class LandingpageComponent {
-
 }

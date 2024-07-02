@@ -14,7 +14,6 @@ export class MySkillsComponent {
     window.location.href="#contact"
   }
 
-
     skills = [
     {
       url: '/assets/img/icons/angular.svg',
@@ -67,5 +66,4 @@ export class MySkillsComponent {
       title: 'Material Design'
     }
   ];
-
 }

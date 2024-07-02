@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './atf-section.component.html',
-  styleUrl: './atf-section.component.scss'
+  styleUrls: ['./atf-section.component.scss', './atf-section.component.mediaQuery.scss']
 })
 export class AtfSectionComponent {
   isTarget: string = '';

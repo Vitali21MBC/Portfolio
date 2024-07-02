@@ -67,7 +67,6 @@
     text-align: right;
     color: white;
 
-    // Den h1habe ich auch schon in der ATF Section. Eventuell auslagern auf höhere Ebene und wiederverwenden.
     h1 {
         font-size: 90px;
         line-height: 108px;
@@ -76,7 +75,6 @@
         margin-block-end: 0.2em;
     }
 
-    // Den p habe ich auch schon in der ATF Section. Eventuell auslagern auf höhere Ebene und wiederverwenden.
     p {
         font-size: 16px;
         line-height: 19px;
@@ -90,10 +88,8 @@
     align-items: center;
     width: 100%;
     height: 120px;
-
 }
 
-// Den Button habe ich auch schon in der ATF Section. Eventuell auslagern auf höhere Ebene und wiederverwenden.
 .contactButton {
     display: flex;
     justify-content: center;
@@ -115,7 +111,6 @@
     }
 }
 
-// Den Seperator habe ich auch schon in der ATF Section. Eventuell auslagern auf höhere Ebene und wiederverwenden.
 .seperator {
     height: 4px;
     min-width: 58px;
@@ -201,7 +196,6 @@
     .seperatorPlaceholder {
         flex: 1;
     }
-
 }
 
 @media (max-width: 830px) {
@@ -238,7 +232,6 @@
 
 @media (max-width: 660px) {
     .buttonContainer {
-
         left: 25px;
         right: 25px;
     }
@@ -291,7 +284,6 @@
 }
 
 @media (max-width: 510px) {
-
     .skillSetContainer {
         row-gap: 22px;
         column-gap: 28px;
@@ -299,7 +291,6 @@
 }
 
 @media (max-width: 445px) {
-
     .skillSetContainer {
         row-gap: 22px;
         column-gap: 28px;
@@ -307,7 +298,6 @@
 
     .buttonContainer {
         bottom: -610px;
-
     }
 
     .mySkillsContainer {
@@ -316,7 +306,6 @@
 }
 
 @media (max-width: 330px) {
-
     .skillSetContainer {
         row-gap: 20px;
         column-gap: 20px;

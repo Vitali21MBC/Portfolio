@@ -5,26 +5,10 @@ div {
     display: flex;
     flex-direction: column;
 
-    app-atf-section {
-        display: flex;
-        justify-content: center;
-    }
-
-    app-about-me-section {
-        display: flex;
-        justify-content: center;
-    }
-
-    app-my-skills {
-        display: flex;
-        justify-content: center;
-    }
-
-    app-portfolio {
-        display: flex;
-        justify-content: center;
-    }
-
+    app-atf-section,
+    app-about-me-section,
+    app-my-skills,
+    app-portfolio,
     app-contact-form {
         display: flex;
         justify-content: center;

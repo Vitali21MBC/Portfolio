@@ -1,8 +1,10 @@
-.privacyPolicy{
-    padding: 4px 100px 60px 100px;
+.privacyPolicy {
+    padding: 80px 100px 60px 100px;
     background-color: var(--darkBlueBG);
     color: white;
     font-family: 'Poppins';
+    width: 100%;
+    max-width: 1920px;
 
     h1 {
         font-size: 44px !important;
@@ -10,6 +12,8 @@
         font-weight: 700 !important;
         margin-block-start: 1.5em !important;
         margin-block-end: 0em !important;
+        word-break: break-word;
+        hyphens: auto;
     }
 
     h2 {
@@ -17,10 +21,26 @@
         line-height: 38px !important;
         font-weight: 700 !important;
         margin-top: 60px !important;
+        word-break: break-word;
+        hyphens: auto;
     }
 
-    a{
+    a {
         text-decoration: none;
         color: white;
+        word-break: break-all;
+        hyphens: auto;
+        display: inline-block;
+    }
+
+    li {
+        word-break: break-word;
+        hyphens: auto;
+    }
+}
+
+@media screen and (max-width: 940px) {
+    .privacyPolicy {
+        padding: 80px 25px 60px 25px;
     }
 }

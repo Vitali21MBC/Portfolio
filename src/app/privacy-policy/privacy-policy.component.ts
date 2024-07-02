@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, ElementRef, OnInit, Renderer2 } from '@angular/core';
 
 @Component({
   selector: 'app-privacy-policy',
@@ -8,10 +8,15 @@ import { Component } from '@angular/core';
   templateUrl: './privacy-policy.component.html',
   styleUrl: './privacy-policy.component.scss'
 })
-export class PrivacyPolicyComponent {
+export class PrivacyPolicyComponent implements OnInit {
+
+  constructor(private renderer: Renderer2, private el: ElementRef) { }
+
   ngOnInit(): void {
-    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
-    //Add 'implements OnInit' to the class.
     window.scrollTo({ top: 0 });
+
+    const privacyPolicyElement = this.el.nativeElement;
+    this.renderer.setStyle(privacyPolicyElement, 'display', 'flex');
+    this.renderer.setStyle(privacyPolicyElement, 'justify-content', 'center');
   }
 }

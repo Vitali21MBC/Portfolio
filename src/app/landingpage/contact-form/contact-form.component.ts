@@ -29,9 +29,7 @@ export class ContactFormComponent {
   mailTest = false;
   showPopup: boolean = false;
 
-  constructor() {
-
-  }
+  constructor() {}
 
   post = {
     endPoint: 'https://vitali-rudi-dev.de/sendMail.php',
@@ -58,7 +56,6 @@ export class ContactFormComponent {
           complete: () => console.info('send post complete'),
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-      console.log('Message sent!');
       this.displayPopup();
       ngForm.resetForm();
     } else {
@@ -70,7 +67,6 @@ export class ContactFormComponent {
     }
   }
 
-
   displayPopup() {
     this.showPopup = true;
     setTimeout(() => {
@@ -81,5 +77,4 @@ export class ContactFormComponent {
   hidePopup() {
     this.showPopup = false;
   }
-
 }

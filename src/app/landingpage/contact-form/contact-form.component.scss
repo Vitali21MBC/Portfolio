@@ -42,17 +42,13 @@
     display: block;
 }
 
-
 .seperator {
     height: 4px;
     min-width: 58px;
     background-color: var(--purple);
     border-top-right-radius: 12px;
     border-bottom-right-radius: 12px;
-
 }
-
-
 
 h1 {
     font-size: 90px !important;
@@ -71,7 +67,6 @@ h2 {
     margin-top: 60px !important;
 }
 
-// Den p habe ich auch schon in der ATF Section. Eventuell auslagern auf höhere Ebene und wiederverwenden.
 p {
     font-size: 16px !important;
     line-height: 19px !important;
@@ -98,7 +93,6 @@ a {
         cursor: pointer;
         text-decoration: underline !important;
     }
-
 }
 
 .colorAccent {
@@ -119,6 +113,7 @@ a {
     align-items: center;
     padding: 15px 30px 15px 30px;
     border-radius: 10px;
+    border: none;
     font-size: 23px;
     line-height: 28px;
     margin-top: 20px;
@@ -311,7 +306,6 @@ a {
 
 @media screen and (max-width: 940px) {
     .goUpButton {
-
         right: 25px;
         z-index: 3;
     }

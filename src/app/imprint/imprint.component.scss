@@ -1,8 +1,10 @@
-.imprint{
-    padding: 4px 100px 60px 100px;
+.imprint {
+    padding: 80px 100px 60px 100px;
     background-color: var(--darkBlueBG);
     color: white;
     font-family: 'Poppins';
+    width: 100%;
+    max-width: 1920px;
 
     h2 {
         font-size: 32px !important;
@@ -11,8 +13,14 @@
         margin-top: 60px !important;
     }
 
-    a{
+    a {
         text-decoration: none;
         color: white;
+    }
+}
+
+@media screen and (max-width: 940px) {
+    .imprint {
+        padding: 80px 25px 60px 25px;
     }
 }
