@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './shared/component/header/header.component';
 import { FooterComponent } from './shared/component/footer/footer.component';
-import * as aos from 'aos';
+import aos from 'aos';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({

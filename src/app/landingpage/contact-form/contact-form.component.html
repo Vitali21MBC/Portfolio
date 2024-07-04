@@ -2,15 +2,14 @@
   <div class="contactText" data-aos="fade-right">
     <div class="contactHeader">
       <div class="seperator"></div>
-      <h1>Contact</h1>
+      <h1>{{"contact" | translate}}</h1>
       <div class="seperatorPlaceholder"></div>
     </div>
-    <h2>Got a problem to solve?</h2>
+    <h2>{{"contact_subheadline" | translate}}</h2>
     <p>
-      Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your
-      projects with my work.
+      {{"contact_text1" | translate}}
       <br><br>
-      Need a Frontend developer? <b>Contact me!</b>
+      {{"contact_text2" | translate}} <br><b>{{"contact_text3" | translate}}</b>
     </p>
   </div>
   <div class="contactBox" data-aos="fade-up">
@@ -18,23 +17,24 @@
       autocomplete="off" novalidate>
       <div class="col-md-4 form-group">
         <input #name="ngModel" [(ngModel)]="contactData.name" name="name" type="text" class="form-control" id="name"
-          placeholder="Your name" required>
+          [placeholder]="'contact_name_input' | translate" required>
         <div *ngIf="!name.valid && name.touched" class="invalid-feedback show">
-          Please provide your name.
+          {{"required_name_input" | translate}}
         </div>
       </div>
       <div class="col-md-4 form-group">
         <input #email="ngModel" [(ngModel)]="contactData.email" name="email" type="email" class="form-control"
-          id="email" placeholder="Your email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+          id="email" [placeholder]="'contact_email_input' | translate" required
+          pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
         <div *ngIf="!email.valid && email.touched" class="invalid-feedback show">
-          Please provide a valid email address.
+          {{"required_email_input" | translate}}
         </div>
       </div>
       <div class="col-md-4 form-group">
         <textarea #message="ngModel" [(ngModel)]="contactData.message" name="message" class="form-control" id="message"
-          placeholder="Your message" rows="8" required></textarea>
+          [placeholder]="'contact_message_input' | translate" rows="8" required></textarea>
         <div *ngIf="!message.valid && message.touched" class="invalid-feedback show">
-          Please provide a message.
+          {{"required_message_input" | translate}}
         </div>
       </div>
       <div class="col-12 form-group">
@@ -42,17 +42,17 @@
           <input #agree="ngModel" [(ngModel)]="contactData.agree" name="agree" class="form-check-input" type="checkbox"
             id="invalidCheck" required (change)="agree.control.markAsTouched()">
           <label class="form-check-label" for="invalidCheck">
-            I've read the <a routerLink="privacy-policy">privacy policy</a> and agree to the processing of my data as
-            outlined.
+            {{"checkbox_text1" | translate}} <a routerLink="privacy-policy">{{"checkbox_text2" | translate}}</a>
+            {{"checkbox_text3" | translate}}
           </label>
           <div *ngIf="!agree.valid && agree.touched" class="invalid-feedback show">
-            You must agree before submitting.
+            {{"required_checkbox_input" | translate}}
           </div>
         </div>
       </div>
       <div class="contactBtnContainer">
         <button type="submit" class=" contactButton" [ngClass]="{'disabled-look': !contactForm.form.valid}">
-          Send message :)
+          {{"message_button" | translate}}
         </button>
       </div>
     </form>

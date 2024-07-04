@@ -328,7 +328,7 @@ a {
         gap: 5px;
     }
 
-    .contactText[_ngcontent-ng-c1811330297] {
+    .contactText {
         align-items: left;
         text-align: left;
     }
@@ -341,5 +341,12 @@ a {
     h2 {
         width: 100%;
         margin-block-end: 0.8em !important;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .contactButton {
+        font-size: 16px;
+        line-height: 19px;
     }
 }

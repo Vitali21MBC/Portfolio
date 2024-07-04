@@ -3,11 +3,12 @@ import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormBuilder, FormsModule, NgForm, ReactiveFormsModule, Validators } from '@angular/forms';
 import { RouterModule, RouterOutlet } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-contact-form',
   standalone: true,
-  imports: [CommonModule, FormsModule, ReactiveFormsModule, RouterModule, RouterOutlet],
+  imports: [CommonModule, FormsModule, ReactiveFormsModule, RouterModule, RouterOutlet, TranslateModule],
   templateUrl: './contact-form.component.html',
   styleUrl: './contact-form.component.scss'
 })

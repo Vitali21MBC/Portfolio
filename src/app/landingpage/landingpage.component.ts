@@ -5,11 +5,12 @@ import { AboutMeSectionComponent } from './about-me-section/about-me-section.com
 import { MySkillsComponent } from './my-skills/my-skills.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-landingpage',
   standalone: true,
-  imports: [CommonModule, AtfSectionComponent, AboutMeSectionComponent, MySkillsComponent, PortfolioComponent, ContactFormComponent],
+  imports: [CommonModule, AtfSectionComponent, AboutMeSectionComponent, MySkillsComponent, PortfolioComponent, ContactFormComponent, TranslateModule],
   templateUrl: './landingpage.component.html',
   styleUrl: './landingpage.component.scss'
 })

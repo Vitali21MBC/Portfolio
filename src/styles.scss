@@ -33,8 +33,9 @@ body {
     --green: #70E61C;
     --lightBlue: #1CDAE6;
     --purple: #9747FF;
-    --darkBlueBG: #141D2F;
-    --darkBlueTrans: #141D2F;
+    --purpleTrans: rgba(151, 71, 255, 0.4);
+    --darkBlueBG: rgb(20, 29, 47);
+    --darkBlueTrans: rgba(20, 29, 47, 0.8);
 }
 
 ::-webkit-scrollbar {

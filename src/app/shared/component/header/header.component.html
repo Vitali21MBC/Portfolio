@@ -1,17 +1,34 @@
 <header class="header">
     <img (click)="navigateStart()" src="./../../../../assets/img/logo.png">
     <nav>
-        <a (click)="isTarget = aboutMe" href="#aboutMe">About me</a>
-        <a (click)="isTarget = mySkills" href="#mySkills">Skills</a>
+        <a (click)="isTarget = aboutMe" href="#aboutMe">{{"about_me" | translate}}</a>
+        <a (click)="isTarget = mySkills" href="#mySkills">{{"skills" | translate}}</a>
         <a (click)="isTarget = portfolio" href="#portfolio">Portfolio</a>
+        <div class="toggle-container">
+            <label class="toggle">
+                <input type="checkbox" id="language-toggle-desktop" (change)="switchLanguageToggle($event)">
+                <div class="slider">
+                    <span class="flag" [ngClass]="flagClass"></span>
+                </div>
+            </label>
+        </div> 
     </nav>
     <div class="burgerMenuIcon" (click)="toggleMenu()">
         <div [ngClass]="{'open': menuOpen, 'close': !menuOpen}"></div>
     </div>
+
 </header>
 <div class="burgerMenu" [class.active]="menuOpen">
-    <a (click)="isTarget = aboutMe; toggleMenu()" href="#aboutMe">About me</a>
-    <a (click)="isTarget = mySkills; toggleMenu()" href="#mySkills">Skills</a>
+    <a (click)="isTarget = aboutMe; toggleMenu()" href="#aboutMe">{{"about_me" | translate}}</a>
+    <a (click)="isTarget = mySkills; toggleMenu()" href="#mySkills">{{"skills" | translate}}</a>
     <a (click)="isTarget = portfolio; toggleMenu()" href="#portfolio">Portfolio</a>
-    <a (click)="isTarget = contact; toggleMenu()" href="#contact">Contact</a>
+    <a (click)="isTarget = contact; toggleMenu()" href="#contact">{{"contact" | translate}}</a>
+    <div class="toggle-container margin-top">
+        <label class="toggle">
+            <input type="checkbox" id="language-toggle-mobile" (change)="switchLanguageToggle($event)">
+            <div class="slider">
+                <span class="flag" [ngClass]="flagClass"></span>
+            </div>
+        </label>
+    </div> 
 </div>
