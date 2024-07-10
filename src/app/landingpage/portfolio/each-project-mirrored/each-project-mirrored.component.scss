@@ -4,7 +4,6 @@
     align-items: center;
     color: white;
     margin-right: 50px;
-    padding-top: 40px;
 }
 
 .projectWrapper {
@@ -12,18 +11,20 @@
     justify-content: center;
     align-items: center;
     flex-direction: row-reverse;
-    gap: 35px;
+    // gap: 35px;
+    gap: 120px;
 }
 
 .projectImg {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 620px;
+    // width: 620px;
 
     img {
-        height: 480px;
-        transform: translate(26px, 20px);
+        // height: 480px;
+        height: 300px;
+        // transform: translate(26px, 20px);
     }
 }
 
@@ -97,9 +98,19 @@
     }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1240px) {
     .projectDescription {
         width: 400px;
+    }
+
+    .projectContainer {
+        margin-right: 0px;
+    }
+
+    .projectImg {
+        img {
+            height: 280px;
+        }
     }
 }
 
@@ -108,49 +119,42 @@
 @media screen and (max-width: 1090px) {
     .projectImg {
         width: auto;
+
+        img {
+            height: 240px;
+        }
     }
 
     .projectContainer {
         margin-right: 20px;
-        padding-top: 0px;
+    }
+
+    .projectWrapper {
+        gap: 80px;
     }
 }
 
 @media screen and (max-width: 920px) {
     .projectWrapper {
         flex-direction: column;
+        gap: 32px;
+    }
+
+    .projectContainer {
+        margin-right: 0px;
     }
 
     .projectDescription {
-        margin-top: -100px;
         align-items: center;
         text-align: center;
-        transform: translate(20px, -20px) !important;
     }
 
     .projectButtons {
         justify-content: center;
     }
-
-    .projectImg {
-        img {
-            transform: translate(20px, -10px);
-        }
-    }
 }
 
 @media screen and (max-width: 560px) {
-    .projectImg {
-        img {
-            height: 240px;
-            transform: translate(0px, -10px);
-        }
-    }
-
-    .projectWrapper {
-        gap: 60px;
-    }
-
     .projectContainer {
         margin-left: 0px;
         padding-left: 20px;
@@ -158,9 +162,14 @@
         margin-right: 0;
     }
 
+    .projectImg {
+        img {
+            height: 220px;
+        }
+    }
+
     .projectDescription {
         width: unset;
-        transform: translate(0px, 0px) !important;
     }
 
     .projectButtons {
@@ -169,8 +178,39 @@
     }
 }
 
+@media screen and (max-width: 460px) {
+    .projectImg {
+        img {
+            height: 200px;
+        }
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .projectImg {
+        img {
+            height: 180px;
+        }
+    }
+}
+
 @media screen and (max-width: 390px) {
-    .githubButton, .liveTestButton{
+    .projectImg {
+        img {
+            height: 160px;
+        }
+    }
+
+    .githubButton,
+    .liveTestButton {
         padding: 15px 20px 15px 20px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .projectImg {
+        img {
+            height: 140px;
+        }
     }
 }

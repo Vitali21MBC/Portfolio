@@ -18,17 +18,25 @@
 
 .colorAccent {
     position: absolute;
-    top: calc(100vh - 704px);
-    left: -100px;
+    bottom: -150px;
     width: 800px;
     height: auto;
 }
 
-.profile {
+.image-wrapper{
     position: absolute;
+    bottom: 60px;
+    left: -16px;
+    display: flex;
+    justify-content: center;
+}
+
+.profileImage {
+    height: 820px;
+}
+
+.profile {
     width: 600px;
-    top: calc(100vh - 804px);
-    left: -120px;
     transform: scalex(-1);
     filter: brightness(0.9);
     filter: drop-shadow(0px 0px 0px white);
@@ -36,7 +44,7 @@
 
 .profileInfoContainer {
     position: absolute;
-    top: calc(100vh - 624px);
+    bottom: 360px;
     right: 100px;
     z-index: 3;
     color: white;
@@ -101,7 +109,7 @@
 
 .contactInfo {
     position: absolute;
-    top: calc(100vh - 64px);
+    bottom: 32px;
     left: 0;
     display: flex;
     justify-content: flex-start;
@@ -145,7 +153,7 @@
 
 .scrolldown {
     position: absolute;
-    top: calc(100vh - 184px);
+    bottom: 32px;
     right: 100px;
     animation: bounce 2.5s ease-in-out infinite;
     z-index: 10;
