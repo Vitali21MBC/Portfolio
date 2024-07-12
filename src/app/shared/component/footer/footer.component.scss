@@ -11,7 +11,7 @@ footer {
     max-width: 1920px;
 }
 
-.logoAndImpAndPP {
+.logo-imprint-privacy-container {
     display: flex;
     justify-content: center;
     align-content: center;
@@ -38,17 +38,27 @@ footer {
             font-size: 16px;
             line-height: 19px;
             text-decoration: none;
-            border-bottom: 2px solid transparent;
-            transition: border-color 0.100s ease-out;
+            position: relative;
 
-            &:hover {
-                border-bottom: 2px solid var(--lightBlue);
+            &::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: -4px;
+                width: 0;
+                height: 3px;
+                background-color: var(--lightBlue);
+                transition: width 0.25s ease;
+            }
+
+            &:hover::after {
+                width: 100%;
             }
         }
     }
 }
 
-.imprintMobile {
+.imprint-mobile {
     justify-content: center;
     align-items: center;
     gap: 16px;
@@ -59,11 +69,21 @@ footer {
         font-size: 16px;
         line-height: 19px;
         text-decoration: none;
-        border-bottom: 2px solid transparent;
-        transition: border-color 0.100s ease-out;
+        position: relative;
 
-        &:hover {
-            border-bottom: 2px solid var(--lightBlue);
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            width: 0;
+            height: 3px;
+            background-color: var(--lightBlue);
+            transition: width 0.25s ease;
+        }
+
+        &:hover::after {
+            width: 100%;
         }
     }
 }
@@ -74,7 +94,7 @@ span {
     line-height: 28px;
 }
 
-.socialMediaLogos {
+.social-media-icons {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -108,7 +128,7 @@ span {
         justify-content: center;
     }
 
-    .logoAndImpAndPP {
+    .logo-imprint-privacy-container {
         margin-bottom: 48px;
 
         img {
@@ -124,7 +144,7 @@ span {
         margin-bottom: 24px;
     }
 
-    .imprintMobile {
+    .imprint-mobile {
         display: flex;
         margin-top: 24px;
         z-index: 9;

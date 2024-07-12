@@ -13,12 +13,12 @@
             </label>
         </div> 
     </nav>
-    <div class="burgerMenuIcon" (click)="toggleMenu()">
+    <div class="burger-menu-icon" (click)="toggleMenu()">
         <div [ngClass]="{'open': menuOpen, 'close': !menuOpen}"></div>
     </div>
 
 </header>
-<div class="burgerMenu" [class.active]="menuOpen">
+<div class="burger-menu" [class.active]="menuOpen">
     <a (click)="isTarget = aboutMe; toggleMenu()" href="#aboutMe">{{"about_me" | translate}}</a>
     <a (click)="isTarget = mySkills; toggleMenu()" href="#mySkills">{{"skills" | translate}}</a>
     <a (click)="isTarget = portfolio; toggleMenu()" href="#portfolio">Portfolio</a>

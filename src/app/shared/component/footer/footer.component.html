@@ -1,7 +1,7 @@
 <footer>
-    <div class="logoAndImpAndPP">
+    <div class="logo-imprint-privacy-container">
         <img (click)="navigateStart()" src="./../../../../assets/img/logo.png">
-        <div class="imprintDesktop">
+        <div>
             <a routerLink="imprint">{{"imprint" | translate}}</a>
             <a routerLink="privacy-policy">{{"privacy_policy" | translate}}</a>
         </div>
@@ -9,14 +9,14 @@
     <span>
         © Vitali Rudi 2024
     </span>
-    <div class="socialMediaLogos">
+    <div class="social-media-icons">
         <img src="./../../../../assets/img/icons/gitHub.svg" alt=""
             (click)="navigateToUrl('https://github.com/Vitali21MBC')">
         <a href="mailto:info@vitali-rudi-dev.de"><img src="./../../../../assets/img/icons/mail.svg" alt=""></a>
         <img src="./../../../../assets/img/icons/linkedIn.svg" alt=""
             (click)="navigateToUrl('https://www.linkedin.com/in/vitali-rudi-a6854a316/')">
     </div>
-    <div class="imprintMobile">
+    <div class="imprint-mobile">
         <a routerLink="imprint">{{"imprint" | translate}}</a>
         <a routerLink="privacy-policy">{{"privacy_policy" | translate}}</a>
     </div>
